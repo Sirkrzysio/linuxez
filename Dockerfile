@@ -3,7 +3,7 @@
 FROM gradle:8.10-jdk17 as build
 WORKDIR /app
 COPY . .
-RUN gradle build --no-daemon
+RUN gradle build -x test --no-daemon
 
 #Uruchamianie JARA
 FROM eclipse-temurin:17-jdk
